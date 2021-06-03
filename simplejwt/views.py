@@ -27,7 +27,8 @@ class TokenViewBase(generics.GenericAPIView):
     # =========================================================================
     def post(self, request, *args, **kwargs):
         try:
-            if request.build_absolute_uri() == "http://localhost:8000/api/token/":
+            # https: // simple - -blogger.herokuapp.com / login
+            if request.build_absolute_uri() == "https://simple--blogger.herokuapp.com/api/token/":
                 json_data = request.body
                 stream = io.BytesIO(json_data)
                 user_data_dic = JSONParser().parse(stream)
@@ -37,7 +38,7 @@ class TokenViewBase(generics.GenericAPIView):
                     if not user_data_dic["url"]:
                         response = Response({"message": "something went wrong"}, status=status.HTTP_400_BAD_REQUEST)
                         return response
-                    if url_check == "http://localhost:8000/api/token/":
+                    if url_check == "https://simple--blogger.herokuapp.com/api/token/":
                         if len(user_data_dic["recapcha"]) == 0:
                             return Response({"message": "Recapcha invalid"}, status=status.HTTP_400_BAD_REQUEST)
                         secret = "6LdjEeQaAAAAAAFIGHyO4CzqEcsBrVKI0DeWFtwg"

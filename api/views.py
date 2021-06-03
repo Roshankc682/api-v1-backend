@@ -245,7 +245,7 @@ def single_blog_data(request):
                     "title_of_blog": single_blog_data["title_of_blog"],
                     "blog_data": single_blog_data["blog_data"],
                     "date_created": single_blog_data["date_created"],
-                    "link": "http://localhost:8000/api/data_details/user",
+                    "link": "https://simple--blogger.herokuapp.com/api/data_details/user",
                     "key": random.randint(0, 22)
                 }, status=status.HTTP_200_OK)
         except:
@@ -273,7 +273,7 @@ def single_blog_published(request):
                     "title_of_blog": single_blog_data["title_of_blog"],
                     "blog_data": single_blog_data["blog_data"],
                     "date_created": single_blog_data["date_created"],
-                    "link": "http://localhost:8000/api/data_details/user",
+                    "link": "https://simple--blogger.herokuapp.com/api/data_details/user",
                     "key": random.randint(0, 22)
                 }, status=status.HTTP_200_OK)
         except:

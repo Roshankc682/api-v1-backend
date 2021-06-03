@@ -26,7 +26,8 @@ SECRET_KEY = '%e*8fzz_d+&n4v8&$u3!xu#q2y2*k@&4sy1o7^d35a&ee+t+ux'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["localhost","simple--blogger.herokuapp.com"]
+ALLOWED_HOSTS = ["localhost","simple--blogger.herokuapp.com","https://simple--blogger.herokuapp.com/login"]
+                              # simple--blogger.herokuapp.com
 
 # Application definition
 
@@ -166,7 +167,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:8000",
     "http://localhost:8000",
-    "localhost"
+    "localhost",
+    "https://simple--blogger.herokuapp.com/",
+    "https://simple--blogger.herokuapp.com",
+    "simple--blogger.herokuapp.com"
 ]
 
 from datetime import timedelta
